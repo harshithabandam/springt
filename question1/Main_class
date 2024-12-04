@@ -1,0 +1,16 @@
+package ch22.harsh;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+        Student1 s=context.getBean("s",Student1.class);
+        System.out.println(s);
+        Employe e1=context.getBean(Employe.class);
+        System.out.println(e1);
+    }
+}
